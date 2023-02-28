@@ -76,9 +76,6 @@ const determineWinner = (userChoice, computerChoice) =>
 			pVictory.style.display = "block";
 			return "userwin";
 		}
-	} else
-	{
-		return "error";
 	}
 }
 
