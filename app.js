@@ -1,6 +1,7 @@
 const btnRock = document.getElementById("btn-rock");
 const btnPaper = document.getElementById("btn-paper");
 const btnScissors = document.getElementById("btn-scissors");
+const playAgain = document.getElementById("btn-again");
 
 const pChoiceRock = document.getElementById("pChoice-rock");
 const pChoicePaper = document.getElementById("pChoice-paper");
@@ -14,6 +15,8 @@ const cChoiceScissors = document.getElementById("cChoice-scissors");
 const pVictory = document.getElementById("pVictory");
 const cVictory = document.getElementById("cVictory");
 const tieResult = document.getElementById("tie");
+
+const reset = Array.from(document.getElementsByClassName("reset"));
 
 const getComputerChoice = () => {
 	cChoice.style.display = "block";
@@ -80,6 +83,29 @@ const determineWinner = (userChoice, computerChoice) =>
 }
 
 btnRock.addEventListener("click", function(){
+	document.getElementById("btn-container").style.display = "none";
 	pChoiceRock.style.display = "block";
 	determineWinner("rock", getComputerChoice());
+	playAgain.style.display = "block";
 });
+
+btnPaper.addEventListener("click", function(){
+	document.getElementById("btn-container").style.display = "none";
+	pChoicePaper.style.display = "block";
+	determineWinner("paper", getComputerChoice());
+	playAgain.style.display = "block";
+});
+
+btnScissors.addEventListener("click", function(){
+	document.getElementById("btn-container").style.display = "none";
+	pChoiceScissors.style.display = "block";
+	determineWinner("scissors", getComputerChoice());
+	playAgain.style.display = "block";
+});
+
+playAgain.addEventListener("click", function(){
+	document.getElementById("btn-container").style.display = "flex";
+	reset.forEach(element => {
+		element.style.display = "none";		
+	});
+})

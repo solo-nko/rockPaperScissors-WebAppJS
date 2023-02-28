@@ -14,7 +14,7 @@ main {
 	border-radius: 10px;
 }
 
-.btn-container {
+#btn-container {
 	display: flex;
 	justify-content: space-around;
 	margin: 1rem 0;
@@ -48,5 +48,9 @@ main {
 #pVictory,
 #cVictory,
 #tie {
+	display: none;
+}
+
+#btn-again {
 	display: none;
 }
