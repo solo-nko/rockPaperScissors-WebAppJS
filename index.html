@@ -4,17 +4,34 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<script src="./app.js" defer></script>
 	<title>Rock, Paper, Scissors</title>
 </head>
 <body>
-	<h1>Rock, Paper, Scissors</h1>
-	<p>Welcome! This is a simple game of Rock, Paper, Scissors. You choose one option, and I'll choose an option, and we'll decide who wins based on the results!</p>
-	<p>When you're ready, press one of the buttons below... if you dare.</p>
-	<div class="btn-container">
-		<button>Rock</button>
-		<button>Paper</button>
-		<button>Scissors</button>
-	</div>
-	
+	<main>
+		<h1>Rock, Paper, Scissors</h1>
+		<p>Welcome! This is a simple game of Rock, Paper, Scissors. You choose one option, and I'll choose an option, and we'll decide who wins based on the results!</p>
+		<p>When you're ready, press one of the buttons below... if you dare.</p>
+		<div class="btn-container">
+			<button>Rock</button>
+			<button>Paper</button>
+			<button>Scissors</button>
+		</div>
+		<section class="log">
+			<p id="pChoice-rock">Oh, you're choosing rock!?</p>
+			<p id="pChoice-paper">Oh, you're choosing paper!?</p>
+			<p id="pChoice-scissors">Oh, you're choosing scissors!?</p>
+			<p id="cChoice">Well, I'm choosing...</p>
+			<p id="cChoice-rock">Rock!</p>
+			<p id="cChoice-paper">Paper!</p>
+			<p id="cChoice-scissors">Scissors!</p>
+		</section>
+		<section class="results">
+			<div id="pVictory">You win!</div>
+			<div id="cVictory">I win!</div>
+			<div id="Tie">We tied!</div>
+		</section>
+	</main>	
 </body>
 </html>
