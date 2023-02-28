@@ -103,6 +103,6 @@ btnScissors.addEventListener("click", function(){
 playAgain.addEventListener("click", function(){
 	document.getElementById("btn-container").style.display = "flex";
 	reset.forEach(element => {
-		element.style.display = "none";		
+		element.style.display = "none";
 	});
 })

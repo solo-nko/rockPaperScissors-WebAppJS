@@ -69,13 +69,14 @@ main {
 	animation-delay: 6s;
 }
 
-#pVictory,
-#cVictory,
-#tie {
+.animPhase4 {
 	display: none;
+	animation: fadeIn .5s ease;
+	animation-delay: 9s;
 }
 
-#btn-again {
-	display: none;
+@keyframes fadeIn {
+	0% {display:none}
+	100% {display:block}
 }
 
