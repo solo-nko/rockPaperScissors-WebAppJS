@@ -29,7 +29,7 @@ main {
 #cChoice-rock,
 #cChoice-paper,
 #cChoice-scissors {
-	display: ;
+	display: none;
 }
 
 .log
@@ -43,4 +43,10 @@ main {
 	margin: 0 1rem;
 	font-family: 'Courier New', Courier, monospace;
 	color: #CEF2CD;
+}
+
+#pVictory,
+#cVictory,
+#tie {
+	display: none;
 }
