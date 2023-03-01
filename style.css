@@ -2,15 +2,15 @@ body {
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	margin: 0;
 	padding: 1rem;
-	background-color: #CEF2CD;
+	background-color: #FAE55C;
 }
 
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #A4BFA3;
-	box-shadow: 4px 4px 1px #4d674c;
+	background-color: #F0A546;
+	box-shadow: 4px 4px 1px #D96E34;
 	border-radius: 10px;
 }
 
@@ -23,17 +23,17 @@ main {
 }
 
 button {
-	background-color: #4d674c;
+	background-color: #D9AB34;
 	font-size: 1.5rem;
 	border: none;
 	border-radius: 30%;
-	box-shadow: 3px 3px #69a067;
+	box-shadow: 3px 3px #D96E34;
 	margin: 2%;
 	transition: all 300ms;
 }
 
 button:hover {
-	background-color: #69a067;
+	background-color: #FC573D;
 }
 
 #pChoice-rock,
@@ -48,14 +48,17 @@ button:hover {
 
 .log
 {
-	background-color: #4d674c;
+	background-color: #D96E34;
 	margin: 1rem;
+	padding: 1rem;
+	min-width: 70%;
+	border-radius: 10px;
 }
 
 .log p
 {
-	margin: 0 1rem;
 	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
 	color: #CEF2CD;
 }
 
@@ -84,7 +87,8 @@ button:hover {
 }
 
 .animPhase4 {
-	display: none;
+	display: block;
+	
 	animation: fadeIn .5s ease;
 	animation-delay: 9s;
 }
