@@ -81,8 +81,8 @@ const determineWinner = (userChoice, computerChoice) =>
 
 btnRock.addEventListener("click", function(){
 	document.getElementById("btn-container").style.display = "none";
-	pChoiceRock.style.display = "block";
 	determineWinner("rock", getComputerChoice());
+	pChoiceRock.style.display = "block";	
 	playAgain.style.display = "block";
 });
 
