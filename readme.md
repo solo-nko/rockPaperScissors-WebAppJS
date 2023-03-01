@@ -20,6 +20,6 @@ More specifically, I wanted this to be an exercise in:
 
 Currently, the app is functional at the basic level. However, there are some things I'd still like to do before I can call it complete.
 
-* Tweak the styling for better contrast and more consistent color theming
-* Add more animations
+* ~~Tweak the styling for better contrast and more consistent color theming~~
+* ~~Add more animations~~
 * Ensure the app is responsive to different screen sizes
