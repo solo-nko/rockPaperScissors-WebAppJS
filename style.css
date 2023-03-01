@@ -40,13 +40,10 @@ button:hover {
 	color: rgba(16, 16, 16, 1);
 }
 
-#pChoice-rock,
-#pChoice-paper,
-#pChoice-scissors,
-#cChoice,
-#cChoice-rock,
-#cChoice-paper,
-#cChoice-scissors {
+.animPhase1,
+.animPhase2,
+.animPhase3,
+.animPhase4 {
 	display: none;
 }
 
@@ -91,14 +88,16 @@ button:hover {
 }
 
 .animPhase4 {
-	display: none;
-	animation: fadeIn .5s ease;
-	animation-delay: 9s;
+	margin: 1rem;
+	opacity: 0;
+	animation: fadeIn 3s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
-	0% {display:none}
-	100% {display:block}
+	from {opacity:0;}
+	to {opacity:1;}
 }
 
 .victory-text {
