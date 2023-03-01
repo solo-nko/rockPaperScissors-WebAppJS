@@ -1,5 +1,8 @@
 body {
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0;
 	padding: 1rem;
 	background-color: #FAE55C;
@@ -7,6 +10,8 @@ body {
 
 main {
 	display: flex;
+	max-width: 80%;
+	padding: 1rem;
 	flex-direction: column;
 	align-items: center;
 	background-color: #F0A546;
@@ -18,8 +23,7 @@ main {
 	display: flex;
 	justify-content: space-around;
 	margin: 1rem 0;
-	border: 1px black solid;
-	width: 50%;
+	width: 80%;
 }
 
 button {
@@ -27,13 +31,17 @@ button {
 	font-size: 1.5rem;
 	border: none;
 	border-radius: 30%;
-	box-shadow: 3px 3px #D96E34;
-	margin: 2%;
-	transition: all 300ms;
+	box-shadow: 3px 3px #663013;
+	transition: transform 100ms, box-shadow 100ms;
 }
 
 button:hover {
 	background-color: #FC573D;
+}
+
+button:active {
+	box-shadow: none;
+	transform: translate(3px, 3px);
 }
 
 .choice-btn:disabled {
@@ -49,10 +57,10 @@ button:hover {
 
 .log
 {
-	background-color: #D96E34;
+	background-color: #663013;
 	margin: 1rem;
 	padding: 1rem;
-	min-width: 70%;
+	min-width: 80%;
 	border-radius: 10px;
 }
 
@@ -87,8 +95,14 @@ button:hover {
 	animation-delay: 3s;
 }
 
+.results {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .animPhase4 {
-	margin: 1rem;
+	margin: 1rem 0;
 	opacity: 0;
 	animation: fadeIn 3s;
 	animation-delay: 5s;
@@ -104,5 +118,7 @@ button:hover {
 	background-color: #D96E34;
 	text-align: center;
 	font-size: 2rem;
+	padding: 1rem;
+	border-radius: 25%;
 }
 
