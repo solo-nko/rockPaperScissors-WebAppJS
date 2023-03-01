@@ -14,24 +14,24 @@
 		<p>Welcome! This is a simple game of Rock, Paper, Scissors. You choose one option, and I'll choose an option, and we'll decide who wins based on the results!</p>
 		<p>When you're ready, press one of the buttons below... if you dare.</p>
 		<div id="btn-container">
-			<button id="btn-rock">Rock</button>
-			<button id="btn-paper">Paper</button>
-			<button id="btn-scissors">Scissors</button>
+			<button class="choice-btn reset-btn" id="btn-rock">Rock</button>
+			<button class="choice-btn reset-btn" id="btn-paper">Paper</button>
+			<button class="choice-btn reset-btn" id="btn-scissors">Scissors</button>
 		</div>
 		<section class="log">
-			<p class="reset typed animPhase1" id="cChoice">Heh, I'm choosing...</p>
-			<p class="reset typed animPhase2" id="cChoice-rock">Rock!</p>
-			<p class="reset typed animPhase2" id="cChoice-paper">Paper!</p>
-			<p class="reset typed animPhase2" id="cChoice-scissors">Scissors!</p>
-			<p class="reset typed animPhase3" id="pChoice-rock">Oh, you're choosing rock!? That means...</p>
-			<p class="reset typed animPhase3" id="pChoice-paper">Oh, you're choosing paper!? That means...</p>
-			<p class="reset typed animPhase3" id="pChoice-scissors">Oh, you're choosing scissors!? That means...</p>			
+			<p class="reset-log typed animPhase1" id="cChoice">Heh, I'm choosing...</p>
+			<p class="reset-log typed animPhase2" id="cChoice-rock">Rock!</p>
+			<p class="reset-log typed animPhase2" id="cChoice-paper">Paper!</p>
+			<p class="reset-log typed animPhase2" id="cChoice-scissors">Scissors!</p>
+			<p class="reset-log typed animPhase3" id="pChoice-rock">Oh, you're choosing rock!? That means...</p>
+			<p class="reset-log typed animPhase3" id="pChoice-paper">Oh, you're choosing paper!? That means...</p>
+			<p class="reset-log typed animPhase3" id="pChoice-scissors">Oh, you're choosing scissors!? That means...</p>			
 		</section>
 		<section class="results">
-			<div class="reset animPhase4" id="pVictory">You win!</div>
-			<div class="reset animPhase4" id="cVictory">I win!</div>
-			<div class="reset animPhase4" id="tie">We tied!</div>
-			<button class="reset animPhase4" id="btn-again">Play Again</button>
+			<div class="victory-text reset-victory animPhase4" id="pVictory">You win!</div>
+			<div class="victory-text reset-victory animPhase4" id="cVictory">I win!</div>
+			<div class="victory-text reset-victory animPhase4" id="tie">We tied!</div>
+			<button class="reset animPhase4 reset-victory" id="btn-again">Play Again</button>
 		</section>
 	</main>
 </body>

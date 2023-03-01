@@ -36,6 +36,10 @@ button:hover {
 	background-color: #FC573D;
 }
 
+.choice-btn:disabled {
+	color: rgba(16, 16, 16, 1);
+}
+
 #pChoice-rock,
 #pChoice-paper,
 #pChoice-scissors,
@@ -59,7 +63,7 @@ button:hover {
 {
 	font-family: 'Courier New', Courier, monospace;
 	margin: 0;
-	color: #CEF2CD;
+	color: #ffef88;
 }
 
 .typed
@@ -87,8 +91,7 @@ button:hover {
 }
 
 .animPhase4 {
-	display: block;
-	
+	display: none;
 	animation: fadeIn .5s ease;
 	animation-delay: 9s;
 }
@@ -96,5 +99,11 @@ button:hover {
 @keyframes fadeIn {
 	0% {display:none}
 	100% {display:block}
+}
+
+.victory-text {
+	background-color: #D96E34;
+	text-align: center;
+	font-size: 2rem;
 }
 
