@@ -1,17 +1,22 @@
+
+//get the buttons
 const btnRock = document.getElementById("btn-rock");
 const btnPaper = document.getElementById("btn-paper");
 const btnScissors = document.getElementById("btn-scissors");
 const playAgain = document.getElementById("btn-again");
 
+//get the text for player's choice
 const pChoiceRock = document.getElementById("pChoice-rock");
 const pChoicePaper = document.getElementById("pChoice-paper");
 const pChoiceScissors = document.getElementById("pChoice-scissors");
 
+//get the text for cpu's choice
 const cChoice = document.getElementById("cChoice");
 const cChoiceRock = document.getElementById("cChoice-rock");
 const cChoicePaper = document.getElementById("cChoice-paper");
 const cChoiceScissors = document.getElementById("cChoice-scissors");
 
+//get the text for game results
 const pVictory = document.getElementById("pVictory");
 const cVictory = document.getElementById("cVictory");
 const tieResult = document.getElementById("tie");
@@ -21,6 +26,7 @@ const btnsToReset = Array.from(document.getElementsByClassName("reset-btn"));
 const logToReset = Array.from(document.getElementsByClassName("reset-log"));
 const victoryToReset = Array.from(document.getElementsByClassName("reset-victory"));
 
+//meant to communicate to user that the buttons are inactive
 const buttonFade = (pressedButton) => {
 	choiceButton.forEach(element => {
 		if (element !== pressedButton) {
@@ -31,6 +37,7 @@ const buttonFade = (pressedButton) => {
 	});
 }
 
+//determines cpu choice
 const getComputerChoice = () => {
 	cChoice.style.display = "block";
 	switch (Math.floor(Math.random()*3)) //Math.random() generates a random number between 0 and 1.  We take the result and multiply that by 3, and then use Math.floor() to round the result down to the nearest integer.
@@ -50,6 +57,8 @@ const getComputerChoice = () => {
 	}
 }
 
+//determines game results based on player choice and cpuchoice
+//set the relevant element display to "block" to re-add to the document flow.
 const determineWinner = (userChoice, computerChoice) => 
 {
 	if (userChoice === computerChoice) 
@@ -92,11 +101,12 @@ const determineWinner = (userChoice, computerChoice) =>
 	}
 }
 
+//what happens when you click the rock button
 btnRock.addEventListener("click", function(){
-	buttonFade(btnRock);
-	determineWinner("rock", getComputerChoice());
-	pChoiceRock.style.display = "block";	
-	playAgain.style.display = "block";
+	buttonFade(btnRock); //disable buttons and cross out the other two
+	determineWinner("rock", getComputerChoice()); //run determineWinner() with rock as player's choice and getComputerChoice() to get CPU choice
+	pChoiceRock.style.display = "block"; //add text for player's choice to document flow	
+	playAgain.style.display = "block"; //add playAgain button to document flow
 });
 
 btnPaper.addEventListener("click", function(){
@@ -113,11 +123,12 @@ btnScissors.addEventListener("click", function(){
 	playAgain.style.display = "block";
 });
 
+//what happens when you press play again
 playAgain.addEventListener("click", function(){
-	btnsToReset.forEach(element => {
+	btnsToReset.forEach(element => { //play buttons re-enabled
 		element.disabled = false;
 		element.style.textDecoration = "none";
-	});
+	}); //remove text and stuff from the document flow again
 	logToReset.forEach(element => {
 		element.style.display = "none";
 	})

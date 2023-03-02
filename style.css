@@ -44,6 +44,7 @@ button:active {
 	transform: translate(3px, 3px);
 }
 
+/* override default disabled styling because it's hard to see */
 .choice-btn:disabled {
 	color: rgba(16, 16, 16, 1);
 }
@@ -71,6 +72,8 @@ button:active {
 	color: #ffef88;
 }
 
+/* add a visual effect to emulate typing */
+/* basically the text has 0 width and is expanded to 100% width over the course of 1.5s */
 .typed
 {
 	overflow: hidden;
@@ -82,11 +85,13 @@ button:active {
 	animation-fill-mode: forwards;
 }
 
+/* referred to above */
 @keyframes typing {
 	from {width: 0}
 	to {width: 100%}
 }
 
+/* delay each line to make it look like the computer is thinking */
 .animPhase2 {
 	animation-delay: 1.5s;
 }
@@ -101,6 +106,7 @@ button:active {
 	align-items: center;
 }
 
+/* fadeIn animation triggers as soon as display is set to block. because it is opacity 0 even after display is set to block it will be invisible, but it will be added to the document flow. after 5s the opacity is changed from 0 to 1 over the course of 3s */
 .animPhase4 {
 	margin: 1rem 0;
 	opacity: 0;
